@@ -15,7 +15,7 @@ export class HeaderComponent {
 logo = 'assets/logo.png';
 menuItems = [{
  text: 'Free Landing Page',
- route: '/'
+ route: '/presentation'
 },
 {
  text: 'Features',
@@ -27,11 +27,11 @@ menuItems = [{
 },
 {
  text: 'Pricing',
- route: '/'
+ route: '/pricing'
 },
 {
  text: 'Contact',
- route: '/'
+ route: '/contact'
 }
  
 ]

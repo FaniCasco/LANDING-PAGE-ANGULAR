@@ -6,7 +6,8 @@ import { PresentationComponent} from "./presentation/presentation.component";
 
 @Component({
   selector: 'app-root',
-  imports: [FeaturesComponent, HeaderComponent, PresentationComponent],
+  standalone: true,
+  imports: [FeaturesComponent, HeaderComponent, PresentationComponent, RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
