@@ -1,0 +1,54 @@
+/* Presentación */
+.presentation {
+  text-align: center;
+  padding: 100px 20px;
+  max-width: 700px;
+  margin: 0 auto;
+
+  h1 {
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 80px;
+    font-size: 48px;
+    font-weight: 700;
+    margin: 20px 0;
+  }
+
+  .pre-title {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+    color: #666;
+  }
+
+  .post-title {
+    display: block;
+    margin: 20px 0;
+    font-size: 18px;
+    color: #555;
+  }
+
+  /* Formulario */
+  .subscribe-form {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    input[type="email"] {
+      padding: 12px 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px 0 0 4px;
+      width: 300px;
+      font-size: 16px;
+    }
+
+
+  }
+
+  p {
+    /* para el "Trusted by over 50,000+ customers" */
+    margin-top: 20px;
+  }
+}

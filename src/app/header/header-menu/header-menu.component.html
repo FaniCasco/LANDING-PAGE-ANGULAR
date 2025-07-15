@@ -1,0 +1,7 @@
+<nav class="menu">
+  <ul *ngIf="menuItems">
+    <li *ngFor="let menuItem of menuItems">
+      <a [href]="menuItem.route">{{ menuItem.text }}</a>
+    </li>
+  </ul>
+</nav>
