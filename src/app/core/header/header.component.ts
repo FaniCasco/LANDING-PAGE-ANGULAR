@@ -1,4 +1,5 @@
-import { OutlineButtonComponent } from './outline-button/outline-button.component';
+import { MenuItem } from "../model/menu-item.model";
+import { OutlineButtonComponent } from "../outline-button/outline-button.component";
 import {HeaderMenuComponent} from "./header-menu/header-menu.component";
 import { Component } from '@angular/core';
 
@@ -13,17 +14,17 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 logo = 'assets/logo.png';
-menuItems = [{
- text: 'Free Landing Page',
- route: '/presentation'
+menuItems: MenuItem [] = [
+ {text: 'Free Landing Pages',
+ route: '/landing'
 },
 {
  text: 'Features',
- route: '/'
+ route: '/features'
 },
 {
  text: 'Services',
- route: '/'
+ route: '/services'
 },
 {
  text: 'Pricing',
@@ -33,6 +34,5 @@ menuItems = [{
  text: 'Contact',
  route: '/contact'
 }
- 
-]
+ ]
 }

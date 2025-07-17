@@ -1,22 +1,26 @@
-import { PresentationComponent } from './presentation/presentation.component';
-import { PricingComponent } from './header/pricing/pricing.component';
-import { ContactComponent } from './header/contact/contact.component';
+import { LandingPageComponent } from './views/landing-page/landing-page.component';
+import { PricingComponent } from './views/pricing/pricing.component';
+import { ContactComponent } from './views/contact/contact.component';
+import { FeaturesComponent } from './views/features/features.component';
+//import { ServicesComponent } from './views/services/services.component';
 import { Routes } from '@angular/router';
 
-
 export const routes: Routes = [
-  { path: 'presentation',
-    component: PresentationComponent
+  { path: 'landing', component: LandingPageComponent },
+  { path: 'features', component: FeaturesComponent },
+  /*   { path: 'services',
+    component: ServicesComponent
+  }, */
+  { path: 'pricing', component: PricingComponent },
+  { path: 'contact', component: ContactComponent },
+  {
+    path: '',
+    redirectTo: '/landing',
+    pathMatch: 'full',
   },
-   { path: 'pricing',
-    component: PricingComponent
+  {
+    path: '**',
+    redirectTo: '/landing',
+    pathMatch: 'full',
   },
-   { path: 'contact',
-    component: ContactComponent
-  }
-
-
-
-
-
 ];
