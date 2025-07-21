@@ -7,9 +7,9 @@
   </span>
 
   <form class="subscribe-form">
-    <input type="email" placeholder="Enter your email" />
-    <button type="button" btn-subscribe>Subscribe</button>
+    <input placeholder="Enter your email" [formControl]="email" />
+    <button type="button" (click)="updateEmail()" btn-subscribe>Subscribe</button>
   </form>
-
-  <p>Trusted by over 50,000+ customers</p>
+<p class="secondary-p">{{email.value}}</p>
+<p class="secondary-p">Trusted by over 50,000+ customers</p>
 </section>

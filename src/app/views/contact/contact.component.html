@@ -1,1 +1,58 @@
-<p>contact works!</p>
+<!-- contact.component.html -->
+<section class="contact-form">
+  <form #contactForm="ngForm" (ngSubmit)="submitForm()" class="subscribe-form">
+    <div class="form-field">
+      <label for="email">Email</label>
+      <input
+        #email="ngModel"
+        type="email"
+        id="email"
+        name="email"
+        class="formControl"
+        [(ngModel)]="formModel.email"
+        required email
+      />
+    </div>
+    <div class="input-error" *ngIf="email.invalid && (email.touched || email.dirty)">
+      <span *ngIf="email.hasError('required')">El email es obligatorio</span>
+           <span *ngIf="email.hasError('email')">El email no tiene formato válido</span>
+    </div>
+    
+
+    <div class="form-field">
+      <label for="subject">Asunto</label>
+      <input
+        #subject="ngModel"
+        type="text"
+        id="subject"
+        name="Subject"
+        class="formControl"
+        [(ngModel)]="formModel.subject"
+        required
+      />
+    </div>
+        <div class="input-error" *ngIf="subject.invalid && (subject.touched || subject.dirty)">
+      <span *ngIf="subject.hasError('required')">El asunto es obligatorio</span>
+           
+    </div>
+
+    <div class="form-field">
+      <label for="message">Mensaje</label>
+      <textarea
+        #message="ngModel"
+        id="message"
+        name="Message"
+        class="formControl"
+        [(ngModel)]="formModel.message"
+        required
+      ></textarea>
+    </div>
+        <div class="input-error" *ngIf="message.invalid && (message.touched || message.dirty)">
+      <span *ngIf="message.hasError('required')">El mensaje es obligatorio</span>          
+    </div>
+
+    <button [disabled]="contactForm.invalid" type="submit" class="form-button">
+      ENVIAR
+    </button>
+  </form>
+</section>

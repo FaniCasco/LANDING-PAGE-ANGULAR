@@ -1,0 +1,19 @@
+.form-field {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 20px auto;
+  margin-bottom: 10px;
+  text-align: left;
+  gap: 5px;
+  width: 500px;
+
+}
+
+.form-button {
+   display: flex;
+  justify-content: center;
+  flex-direction: column;
+    margin: 20px auto;
+  width: 500px;
+}

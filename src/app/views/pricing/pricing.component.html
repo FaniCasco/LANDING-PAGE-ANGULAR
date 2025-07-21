@@ -1,1 +1,30 @@
-<p>pricing works!</p>
+<section class="pricing-form">
+  <form>
+    <div class="form-field">
+      <label for="email">Email</label>
+      <input type="email" id="email" class="form-control" required />
+    </div>
+
+    <div class="form-field">
+      <label for="landing-name">Nombre para tu Landing Page</label>
+      <input type="text" id="landing-name" class="form-control" required />
+    </div>
+
+    <div class="form-field">
+      <label for="feature">Features</label>
+      <select id="feature" class="form-control" required>
+        <option value="" disabled selected>Seleccione una feature</option>
+        <option *ngFor="let feature of features" [value]="feature.title">
+          {{ feature.title }}
+        </option>
+      </select>
+    </div>
+
+    <div class="form-field">
+      <label for="count">Cantidad</label>
+      <input type="number" id="count" class="form-control" required />
+    </div>
+
+    <button type="submit" class="form-button">SOLICITAR</button>
+  </form>
+</section>
